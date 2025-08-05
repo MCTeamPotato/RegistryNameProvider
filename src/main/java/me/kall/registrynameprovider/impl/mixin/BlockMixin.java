@@ -14,7 +14,7 @@ public abstract class BlockMixin implements RegistryNameContainer {
 
     @Override
     public ResourceLocation provider$getRegistryName() {
-        if (provider$registryName == null) provider$registryName = BuiltInRegistries.BLOCK.getKey((Block) (Object)this);
+        if (provider$registryName == null) provider$registryName = BuiltInRegistries.BLOCK.getKeyOrNull((Block) (Object)this);
         return this.provider$registryName;
     }
 }

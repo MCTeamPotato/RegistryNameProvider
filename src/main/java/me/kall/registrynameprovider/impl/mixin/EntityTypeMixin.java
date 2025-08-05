@@ -14,7 +14,7 @@ public abstract class EntityTypeMixin implements RegistryNameContainer {
 
     @Override
     public ResourceLocation provider$getRegistryName() {
-        if (provider$registryName == null) provider$registryName = BuiltInRegistries.ENTITY_TYPE.getKey((EntityType<?>) (Object)this);
+        if (provider$registryName == null) provider$registryName = BuiltInRegistries.ENTITY_TYPE.getKeyOrNull((EntityType<?>) (Object)this);
         return this.provider$registryName;
     }
 }

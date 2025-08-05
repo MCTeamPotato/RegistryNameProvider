@@ -14,7 +14,7 @@ public abstract class AttributeMixin implements RegistryNameContainer {
 
     @Override
     public ResourceLocation provider$getRegistryName() {
-        if (provider$registryName == null) provider$registryName = BuiltInRegistries.ATTRIBUTE.getKey((Attribute) (Object)this);
+        if (provider$registryName == null) provider$registryName = BuiltInRegistries.ATTRIBUTE.getKeyOrNull((Attribute) (Object)this);
         return this.provider$registryName;
     }
 }

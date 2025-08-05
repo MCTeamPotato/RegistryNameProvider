@@ -14,7 +14,7 @@ public abstract class ItemMixin implements RegistryNameContainer {
 
     @Override
     public ResourceLocation provider$getRegistryName() {
-        if (provider$registryName == null) provider$registryName = BuiltInRegistries.ITEM.getKey((Item)(Object)this);
+        if (provider$registryName == null) provider$registryName = BuiltInRegistries.ITEM.getKeyOrNull((Item)(Object)this);
         return this.provider$registryName;
     }
 }

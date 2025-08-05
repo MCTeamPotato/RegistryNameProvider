@@ -14,7 +14,7 @@ public abstract class MobEffectMixin implements RegistryNameContainer {
 
     @Override
     public ResourceLocation provider$getRegistryName() {
-        if (provider$registryName == null) provider$registryName = BuiltInRegistries.MOB_EFFECT.getKey((MobEffect) (Object)this);
+        if (provider$registryName == null) provider$registryName = BuiltInRegistries.MOB_EFFECT.getKeyOrNull((MobEffect) (Object)this);
         return this.provider$registryName;
     }
 }
