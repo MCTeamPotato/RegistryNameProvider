@@ -41,12 +41,6 @@ base {
 
 loom {
     silentMojangMappingsLicense()
-
-    if (!isNeo) {
-        forge {
-            mixinConfig 'registrynameprovider.mixins.json'
-        }
-    }
 }
 
 repositories {

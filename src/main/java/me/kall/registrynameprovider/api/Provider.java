@@ -1,6 +1,5 @@
 package me.kall.registrynameprovider.api;
 
-import me.kall.registrynameprovider.impl.RegistryNameContainer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.EntityType;
@@ -8,30 +7,31 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.NotNull;
 
 public final class Provider {
-    public static ResourceLocation getRegistryName(EntityType<?> entityType) {
-        return ((RegistryNameContainer)entityType).provider$getRegistryName();
+    public static ResourceLocation getRegistryName(@NotNull EntityType<?> entityType) {
+        return entityType.getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(Item item) {
-        return ((RegistryNameContainer)item).provider$getRegistryName();
+    public static ResourceLocation getRegistryName(@NotNull Item item) {
+        return item.getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(Block block) {
-        return ((RegistryNameContainer)block).provider$getRegistryName();
+    public static ResourceLocation getRegistryName(@NotNull Block block) {
+        return block.getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(Enchantment enchantment) {
-        return ((RegistryNameContainer)enchantment).provider$getRegistryName();
+    public static ResourceLocation getRegistryName(@NotNull Enchantment enchantment) {
+        return enchantment.getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(Attribute attribute) {
-        return ((RegistryNameContainer)attribute).provider$getRegistryName();
+    public static ResourceLocation getRegistryName(@NotNull Attribute attribute) {
+        return attribute.getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(MobEffect effect) {
-        return ((RegistryNameContainer)effect).provider$getRegistryName();
+    public static ResourceLocation getRegistryName(@NotNull MobEffect effect) {
+        return effect.getRegistryName();
     }
 }
 
