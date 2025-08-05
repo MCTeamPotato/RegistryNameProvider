@@ -8,29 +8,30 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public final class Provider {
-    public static ResourceLocation getRegistryName(@NotNull EntityType<?> entityType) {
+    public static @Nullable ResourceLocation getRegistryName(@NotNull EntityType<?> entityType) {
         return entityType.getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(@NotNull Item item) {
+    public static @Nullable ResourceLocation getRegistryName(@NotNull Item item) {
         return item.getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(@NotNull Block block) {
+    public static @Nullable ResourceLocation getRegistryName(@NotNull Block block) {
         return block.getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(@NotNull Enchantment enchantment) {
+    public static @Nullable ResourceLocation getRegistryName(@NotNull Enchantment enchantment) {
         return enchantment.getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(@NotNull Attribute attribute) {
+    public static @Nullable ResourceLocation getRegistryName(@NotNull Attribute attribute) {
         return attribute.getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(@NotNull MobEffect effect) {
+    public static @Nullable ResourceLocation getRegistryName(@NotNull MobEffect effect) {
         return effect.getRegistryName();
     }
 }
