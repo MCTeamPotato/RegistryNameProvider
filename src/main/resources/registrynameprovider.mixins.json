@@ -9,7 +9,6 @@
   "mixins": [
     "AttributeMixin",
     "BlockMixin",
-    "EnchantmentMixin",
     "EntityTypeMixin",
     "ItemMixin",
     "MobEffectMixin"

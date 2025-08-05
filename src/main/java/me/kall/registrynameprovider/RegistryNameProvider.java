@@ -1,6 +1,6 @@
 package me.kall.registrynameprovider;
 
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.fml.common.Mod;
 
 @Mod(RegistryNameProvider.MOD_ID)
 public final class RegistryNameProvider {
