@@ -8,29 +8,30 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.Nullable;
 
 public final class Provider {
-    public static ResourceLocation getRegistryName(EntityType<?> entityType) {
+    public static @Nullable ResourceLocation getRegistryName(EntityType<?> entityType) {
         return ((RegistryNameContainer)entityType).provider$getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(Item item) {
+    public static @Nullable ResourceLocation getRegistryName(Item item) {
         return ((RegistryNameContainer)item).provider$getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(Block block) {
+    public static @Nullable ResourceLocation getRegistryName(Block block) {
         return ((RegistryNameContainer)block).provider$getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(Enchantment enchantment) {
+    public static @Nullable ResourceLocation getRegistryName(Enchantment enchantment) {
         return ((RegistryNameContainer)enchantment).provider$getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(Attribute attribute) {
+    public static @Nullable ResourceLocation getRegistryName(Attribute attribute) {
         return ((RegistryNameContainer)attribute).provider$getRegistryName();
     }
 
-    public static ResourceLocation getRegistryName(MobEffect effect) {
+    public static @Nullable ResourceLocation getRegistryName(MobEffect effect) {
         return ((RegistryNameContainer)effect).provider$getRegistryName();
     }
 }
